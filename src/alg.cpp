@@ -42,11 +42,11 @@ int countPairs3(int *arr, int len, int value) {
     ++k;
   for (int i = 0; i < k - 1; i++) {
     int x = value - arr[i];
-    int a = i+1 ;
+    int a = i + 1;
     int b = k - 1;
     bool f = false;
     while ((a <= b) && (!f)) {
-      int cen = (a + b ) / 2; 
+      int cen = (a + b) / 2;
       if (arr[cen] == x) {
         for (int j = a; j <= b; j++)
           if (arr[j] == x)
