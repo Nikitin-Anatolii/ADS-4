@@ -19,21 +19,19 @@ int countPairs2(int *arr, int len, int value) {
   while (a != b) {
     if (arr[a] + arr[b] > value) {
       --b;
-    }
-    else {
-      if (arr[a] + arr[b] < value) {
-        ++a;
-      }
-      else {
-        for (int i = k - 1; i > a; i--) {
-          if (arr[i] + arr[a] < value)
-            break;
-          if (arr[i] + arr[a] == value)
-            ++w;
+    } else {
+        if (arr[a] + arr[b] < value) {
+          ++a;
+      } else {
+          for (int i = k - 1; i > a; i--) {
+            if (arr[i] + arr[a] < value)
+              break;
+            if (arr[i] + arr[a] == value)
+              ++w;
+          }
+          ++a;
         }
-        ++a;
       }
-    }
   }
   return w;
 }
