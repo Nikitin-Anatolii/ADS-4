@@ -1,4 +1,4 @@
-int countPairs1(int *arr,int len,int value) {
+int countPairs1(int *arr, int len, int value) {
   int w = 0;
   for (int i = 0; i < len - 1; i++) {
     for (int j = i + 1; j < len; j++) {
@@ -8,7 +8,7 @@ int countPairs1(int *arr,int len,int value) {
   }
   return w;
 }
-int countPairs2(int *arr,int len,int value) {
+int countPairs2(int *arr, int len, int value) {
   int k = 0;
   while ((value - arr[0] >= arr[k]) && (k < len))
     ++k;
@@ -32,7 +32,7 @@ int countPairs2(int *arr,int len,int value) {
   }
   return w;
 }
-int countPairs3(int *arr,int len,int value) {
+int countPairs3(int *arr, int len, int value) {
   int w = 0;
   int k = 0;
   while ((value - arr[0] >= arr[k]) && (k < len))
