@@ -48,7 +48,7 @@ int countPairs3(int *arr, int len, int value) {
     while ((a <= b) && (!f)) {
       int cen = (a + b) / 2;
       if (arr[cen] == x) {
-        for (int j = a; j <= b; j++)
+        for (int j = a; j < b; j++)
           if (arr[j] == x)
             ++w;
         f = true;
